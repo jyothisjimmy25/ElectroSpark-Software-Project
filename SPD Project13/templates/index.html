@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroSpark</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden; /* Hide overflow during the shock effect */
+        }
+
+        #loading-image {
+            display: none;
+            width: 50vw; /* Set the width to 50% of the viewport width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        #shock-effect {
+            font-size: 3em;
+            animation: shock 1s ease-out;
+        }
+
+        @keyframes shock {
+            0% {
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img id="loading-image" src="{{ url_for('static', filename='images/electrospark_logo_with_color_sky_blue_electrospa.jpg') }}" alt="Loading Image">
+    <div id="shock-effect">ElectroSpark: Ignite Your Curiosity in Electronics</div>
+
+    <script>
+        document.getElementById("loading-image").style.display = "block";
+
+        setTimeout(function () {
+            window.location.href = "/Signin";
+        }, 4000);
+    </script>
+</body>
+
+</html>

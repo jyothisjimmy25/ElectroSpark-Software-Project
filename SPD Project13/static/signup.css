@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #4e79a7; /* Lighter Blue Background */
+}
+
+.container {
+    max-width: 400px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+    background-color: #fff; /* White Background for the Content */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    position: relative;
+    text-align: center;
+}
+
+h2 {
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 70px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+}
+
+.signup-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.signup-option {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.signup-option:hover {
+    background-color: #308fe2; /* Slightly Darker Blue for Hover Effect */
+}
+
+.more-options {
+    color: #3498db; /* Blue color for More Options text */
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.more-options:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+.line {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.signin-options {
+    display: none; /* Initially hide the additional sign-in options */
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.signin-option {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.signin-option:hover {
+    background-color: #76b7f0; /* Slightly Darker Blue for Hover Effect */
+}
+
+.center-text {
+    text-align: center;
+    margin-top: 10px; /* Add a bit of space */
+}
+
+/* Styles for the sign-in modal */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #308fe2;
+}
+
+/* Optional: Center the modal on small screens */
+@media (max-width: 576px) {
+    .modal-dialog {
+        margin: 10% auto;
+    }
+}

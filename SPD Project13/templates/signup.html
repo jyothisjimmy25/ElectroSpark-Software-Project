@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroSpark - Sign Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css')}}">
+</head>
+
+<body>
+        <img src="{{ url_for('static', filename='images/electrospark_logo_with_color_sky_blue_electrospa.jpg') }}" alt="Logo" class="logo">
+    <div class="container">
+        <h2 style="font-size: 1.8em; margin-bottom: 15px;">Starting <span style="color: black;">ElectroSpark</span></h2>
+        <p class="center-text" style="margin-bottom: 15px;">How will you create your account?</p>
+
+        <div class="signup-options">
+            <div class="signup-option" style="background-color: #3498db; color: #fff;" onclick="openSignUpModal()">Sign Up with Email</div>
+            <div class="line" style="margin: 15px 0;"></div>
+            <div class="signup-option" onclick="signInWithGoogle()" style="margin-bottom: 10px;">
+                <i class="bi bi-google" style="font-size: 20px; margin-right: 10px;"></i>
+                Sign In with Google
+            </div>
+            <div class="signup-option" onclick="signInWithApple()" style="margin-bottom: 10px;">
+                <i class="bi bi-apple" style="font-size: 20px; margin-right: 10px;"></i>
+                Sign In with Apple
+            </div>
+            <div class="more-options" onclick="showMoreOptions()" style="margin-bottom: 10px;">More sign-in options...</div>
+        </div>
+
+        <div class="signin-options">
+            <div class="signup-option" onclick="signInWithMicrosoft()">
+                <i class="bi bi-windows" style="font-size: 20px; margin-right: 10px;"></i>
+                Sign In with Microsoft
+            </div>
+            <div class="signup-option" onclick="signInWithFacebook()">
+                <i class="bi bi-facebook" style="font-size: 20px; margin-right: 10px;"></i>
+                Sign In with Facebook
+            </div>
+        </div>
+
+        <div class="center-text">
+            <p style="margin-bottom: 10px;">Already have an account? </p>
+            <p><a href="/Signin" style="font-weight: bold; color: #3498db;">Sign In</a></p>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal" id="signUpModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Create Account</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form action="/submit_signup" method="POST">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" class="form-control" id="fullname" name="fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth:</label>
+                            <input type="date" class="form-control" id="dob" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Role:</label>
+                            <select id="role" class="form-control" name="role" required>
+                                <option value="student">Student</option>
+                                <option value="teacher">Teacher</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js (if needed) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Your sign-up page content goes here -->
+
+    <script>
+        function signUpWithEmail() {
+            // Implement your logic for email sign up
+            console.log("Sign up with email clicked");
+        }
+
+        function openSignUpModal() {
+            $('#signUpModal').modal('show');
+        }
+
+        function signInWithGoogle() {
+            // Implement your logic for Google sign in
+            console.log("Sign in with Google clicked");
+        }
+
+        function signInWithApple() {
+            // Implement your logic for Apple sign in
+            console.log("Sign in with Apple clicked");
+        }
+
+        function signInWithMicrosoft() {
+            // Implement your logic for Microsoft sign in
+            console.log("Sign in with Microsoft clicked");
+        }
+
+        function signInWithFacebook() {
+            // Implement your logic for Facebook sign in
+            console.log("Sign in with Facebook clicked");
+        }
+
+        function showMoreOptions() {
+            // Show the additional sign-in options
+            var moreOptions = document.querySelector('.more-options');
+            moreOptions.style.display = 'none';
+
+            var signinOptions = document.querySelector('.signin-options');
+            signinOptions.style.display = 'flex';
+        }
+    </script>
+</body>
+
+</html>

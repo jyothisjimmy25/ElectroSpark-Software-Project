@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroSpark</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Add any additional stylesheets or frameworks as needed -->
+    <style>
+        /* Additional CSS for the sidebar */
+        /* Additional CSS for the sidebar */
+.sidebar {
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background-color: #f3f3f3;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 999; /* Ensure sidebar appears above other content */
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #ddd;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-bars open-btn" style="font-size: 20px;"></i> <!-- Move the hamburger icon inside the navbar-brand -->
+                ElectroSpark
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Main">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Experiments">Experiments</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/About">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/indexes">Contact</a>
+                    </li>
+                </ul>
+                <!--<form class="form-inline ml-auto">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>-->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ username }}
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/Profile">Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/logout">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- <section id="home"> -->
+            <!-- Update the GIF source -->
+            <!-- <img src="vediohome.gif" alt="ElectroSpark GIF" class="home-image" width="100%" height="auto">
+
+            <div class="content-overlay">
+                <h2>Welcome to ElectroSpark</h2>
+                <p>An interactive playground for learning electronics.</p>
+            </div>
+        </section>
+
+
+        <section id="instructions">
+            <h2>Experiment 1: Circuit Basics</h2>
+            <p>Clear and concise step-by-step instructions for the experiment.</p>
+            <ul>
+                <li>List of required components and tools</li>
+                <li>Visual aids: Images showing the connections and setup</li>
+                <li>Tips and notes to enhance user understanding</li>
+            </ul>
+        </section> -->
+
+        <section id="about">
+            <h2>About ElectroSpark</h2>
+            <p>,ElectroSpark aims to simplify the learning experience in basic electronics. Developed as an online interactive platform,
+                 ElectroSpark focuses on providing students with a virtual laboratory environment for conducting basic electronic experiments.
+                  The objective is to offer a close-to-real-life experience while learning fundamental electronic concepts.</p>
+
+                <p><b>For Teachers:</b></p>
+                <p>ElectroSpark offers teachers a powerful tool to enhance their teaching methods. They can seamlessly integrate live demonstrations
+                 of complex electronic concepts into their classroom sessions using ElectroSpark's interactive simulations. The platform also 
+                 provides a curated curriculum with pre-integrated difficult concepts, enabling teachers to streamline their lesson plans. 
+                 Moreover, teachers can assign pre- or post-lab assignments to students, promoting inclusive learning for all.</p>
+                
+                <p><b>For Students:</b></p>
+                <p>Students using ElectroSpark gain access to a virtual lab environment that mirrors the real-world laboratory setup. Through 
+                extensive 2D animations and accurately modeled components, students experience a lifelike representation of laboratory equipment 
+                and behavior. Interactive animations further enhance the learning process, providing students with engaging and immersive 
+                learning experiences.</p>
+                
+                <p><b>Key Features of ElectroSpark:</b></p>
+                
+                <p>Availability 24X7, allowing students to learn at their own pace and convenience.
+                Realistic components and laboratory settings to provide an authentic learning experience.
+                Step-by-step guidance through experiments via a user-friendly wizard interface.
+                In summary, ElectroSpark serves as an invaluable resource for both teachers and students, offering a dynamic platform that fosters
+                 interactive learning and facilitates a deeper understanding of basic electronics concepts.</p>
+        </section>
+
+        <!-- <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Use the form below to provide feedback or ask questions. Connect with us on social media for updates.</p> -->
+            <!-- Contact form -->
+            <!-- <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section> -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ElectroSpark. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a
+                href="#terms">Terms of Service</a></p>
+        <!-- Add links to privacy policy and terms of service -->
+    </footer>
+
+    <!-- Add any additional scripts or frameworks as needed -->
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

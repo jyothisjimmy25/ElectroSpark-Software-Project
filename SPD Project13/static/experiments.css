@@ -1,0 +1,185 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+#instructions p {
+  color: rgb(9, 9, 12);
+  width: 1000px;
+  font-size: large;
+}
+
+/* Basic styling for the entire page */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+header {
+  background-color: #308fe2; /* Updated navbar color */
+  color: #fff;
+  padding-top: 15px; /* Adjusted padding */
+}
+
+nav a {
+  color: #fff;
+  font-weight: bold; /* Make navbar text bold */
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+/* Styling for the experiments dropdown */
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Styling for the main content sections */
+main {
+  padding: 40px 20px;
+}
+
+#home {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: -40px; /* Adjusted to touch the navbar border */
+}
+
+.home-image {
+  width: 100%; /* Adjusted width for better alignment */
+  max-width: 2000px; /* Set a maximum width for the image */
+  height: auto;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+
+.content-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #fff;
+}
+
+h1.welcome-heading {
+  font-size: 3em; /* Increased font size */
+  font-weight: bold;
+}
+
+h1.welcome-heading .highlight {
+  color: #ffcc00; /* Highlight color */
+}
+
+
+cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #308fe2; /* Match navbar color */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+cta-button:hover {
+  background-color: #007bb5; /* Slightly darker color on hover */
+}
+
+/* Styling for the experiments section */
+#experiments {
+  margin-top: 40px;
+  background-color: #fff; /* Experiment background color */
+  padding: 20px;
+}
+
+.experiment-card {
+  margin-bottom: 300px;
+}
+
+.experiment-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.experiment-card h3 {
+  margin-top: 10px;
+}
+
+.experiment-card a {
+  display: block;
+  margin-top: 10px;
+  color: #308fe2;
+  font-weight: bold;
+}
+
+.experiment-card a:hover {
+  color: #007bff; /* Primary color on hover */
+}
+
+/* Styling for the instructions section */
+#instructions {
+  margin-top: 40px;
+  margin-left: 220px;
+}
+
+/* Styling for the contact form */
+#contactForm {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #308fe2; /* Match navbar color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007bb5; /* Slightly darker color on hover */
+}
+
+/* Styling for the footer */
+footer {
+  background-color: #308fe2; /* Match navbar color */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 300px;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+.form-inline .btn-outline-success {
+  background-color: cyan;
+  /* Add any additional styles as needed */
+}
+
